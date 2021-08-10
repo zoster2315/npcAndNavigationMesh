@@ -7,7 +7,7 @@ public class SightLine : MonoBehaviour
     public string TargetTag = "Player";
     public float FieldOfView = 45f;
 
-    private bool IsTargetInSightLine { get; set; } = false;
+    public bool IsTargetInSightLine { get; set; } = false;
     public Vector3 LastKnownSighting { get; set; } = Vector3.zero;
 
     private SphereCollider ThisCollider;
