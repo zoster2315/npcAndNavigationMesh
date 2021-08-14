@@ -38,7 +38,7 @@ public class SightLine : MonoBehaviour
 
      private bool TargetInFOV(Transform target)
     {
-        Vector3 dirToTarget = target.position - EyePoint.position;
+        Vector3 dirToTarget = new Vector3(target.position.x, EyePoint.position.y, target.position.z) - EyePoint.position;
         float angle = Vector3.Angle(EyePoint.forward, dirToTarget);
 
         if (angle <= FieldOfView)
